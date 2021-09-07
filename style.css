@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    font-family: 'Urbanist', sans-serif;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: #4e4f53;
+}
+th {
+    cursor: pointer;
+    font-weight: 700;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 0 5px;
+}
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul {
+    list-style: none;
+}
+textarea {
+    resize: none;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 20px;
+}
+::-webkit-scrollbar-track-piece:start {
+    margin-top: 20px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: rgba(78, 79, 83, 0.5);
+}
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+}
+/*----------containers----------*/
+
+.checkbox-container {
+    width: 25%;
+    padding: 5vh;
+}
+.table-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edit-container {
+    width: 25%;
+    padding: 5vh;
+    height: 100vh;
+}
+
+/*-----------checkboxes-----------*/
+
+.checkboxes {
+    margin-left: 33%;
+}
+.checkboxes_item {
+    margin-bottom: 10px;
+}
+.checkboxes_input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkboxes_input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.checkboxes_input+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #a4a4a4;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.checkboxes_input:checked+label::before {
+    border-color: #4e4f53;
+    background-color: #4e4f53;
+    background-image: url("img/check.svg");
+
+}
+.checkboxes_label {
+    cursor: pointer;
+    font-weight: 700;
+}
+/*-----------table-----------*/
+
+#table {
+    width: 100%;
+    margin: 5vh auto;
+    border-collapse: collapse;
+}
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-prev {
+    background: url("img/arrow-left.svg") no-repeat transparent;
+    background-size: cover;
+    border: none;
+    height: 20px;
+    width: 20px;
+}
+.btn-next {
+    background: url("img/arrow-right.svg") no-repeat transparent;
+    background-size: cover;
+    border: none;
+    height: 20px;
+    width: 20px;
+}
+.page {
+    font-weight: 200;
+}
+/*-----------edit form-----------*/
+
+.edit-form {
+    margin-left: 5%;
+    display: none;
+    position: relative;
+}
+.btn-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: url("img/close.svg") no-repeat transparent;
+    background-size: cover;
+    border: none;
+    width: 18px;
+    height: 18px;
+}
+.edit-form_list {
+}
+.edit-form_label {
+    margin-left: 15px;
+    font-weight: 700;
+}
+.edit-form_input,
+.edit-form_textarea,
+.edit-form_select {
+    display: block;
+    border: 1px solid #a4a4a4;
+    border-radius: 25px;
+    width: 90%;
+    height: 2rem;
+    margin-bottom: 10px;
+    padding: 0 15px 0 15px;
+    font: inherit;
+    outline: none;
+}
+#input_about {
+    height: 40vh;
+}
+.edit-form_select {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+.edit-form_select::after {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.btn-edit {
+    cursor: pointer;
+    border-radius: 25px;
+    background: #a4a4a4;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 2rem;
+    font: inherit;
+    font-weight: 700;
+    transition: background 0.5s ease-in-out;
+}
+.btn-edit:hover {
+    background: #4e4f53;
+}

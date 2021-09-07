@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="checkbox-container">
+    <ul class="checkboxes">
+        <li class="checkboxes_item">
+            <input class="checkboxes_input" id="checkbox_first-name" type="checkbox" value="hide">
+            <label class="checkboxes_label" for="checkbox_first-name">
+                First Name
+            </label>
+        </li>
+        <li class="checkboxes_item">
+            <input class="checkboxes_input" id="checkbox_last-name" type="checkbox" value="hide">
+            <label class="checkboxes_label" for="checkbox_last-name">
+                Last Name
+            </label>
+        </li>
+        <li class="checkboxes_item">
+            <input class="checkboxes_input" id="checkbox_about" type="checkbox" value="hide">
+            <label class="checkboxes_label" for="checkbox_about">
+                About
+            </label>
+        </li>
+        <li class="checkboxes_item">
+            <input class="checkboxes_input" id="checkbox_eye-color" type="checkbox" value="hide">
+            <label class="checkboxes_label" for="checkbox_eye-color">
+                Eye Color
+            </label>
+        </li>
+    </ul>
+</div>
+
+<div class="table-container">
+    <table id="table"></table>
+
+    <div class="pagination">
+        <div class="pagination-buttons">
+            <button class="btn-prev"></button>
+            <button class="btn-next"></button>
+        </div>
+        <span class="page"></span>
+    </div>
+</div>
+
+<div class="edit-container">
+    <div class="edit-form">
+        <button class="btn-close"></button>
+
+        <ul class="edit-form_list">
+            <li>
+                <label class="edit-form_label" for="input_first-name">First Name :</label>
+                <input class="edit-form_input" id="input_first-name" type="text" name="first-name">
+            </li>
+            <li>
+                <label class="edit-form_label" for="input_last-name">Last Name :</label>
+                <input class="edit-form_input" id="input_last-name" type="text" name="last-name">
+            </li>
+            <li>
+                <label class="edit-form_label" for="input_about">About :</label>
+                <textarea class="edit-form_textarea" id="input_about" name="about"></textarea>
+            </li>
+            <li>
+                <label class="edit-form_label" for="input_eye-color">Eye Color :</label>
+                <div class="edit-form_select">
+                    <select id="input_eye-color" name="eye-color"></select>
+                </div>
+            </li>
+        </ul>
+
+        <button class="btn-edit" type="button">
+            Edit
+        </button>
+    </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
